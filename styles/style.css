@@ -36,3 +36,151 @@ ul,
 ol {
   list-style: none;
 }
+
+/* --- Own styles --- */
+
+.content {
+  max-width: auto;
+  /* нужно ли указывать ширина в точности как на макете? */
+  max-height: auto;
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+  margin: 133px auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  /* rewrite */
+  /* overflow-x: scroll !important; */
+}
+
+/* --- main video --- */
+
+.result {}
+
+.result__video-container {
+  /* есть наползание верхнего слоя отличается (шаг 3) */
+  position: relative;
+}
+
+.result__video {
+  width: 100%;
+  /* Растягивает видео на всю ширину родительского контейнера */
+  height: 386px;
+  /* Автоматически подбирает высоту, сохраняя пропорции */
+  max-width: 711px;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+/*  Дополнительное решение (Необходимо подумать)
+    .container {
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      position: relative;
+    }
+  
+    .container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+*/
+
+.search-form {
+  display: flex;
+  justify-content: space-between
+}
+
+.search-form__submit-button {
+  align-self: baseline;
+}
+
+/* --- form after video --- */
+
+.search-form__fieldset-title {
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  text-align: left;
+}
+
+/* --- list of videos --- */
+
+.content__details {
+  width: 100%;
+  max-height: 534px;
+  max-width: 399px;
+  box-sizing: border-box;
+}
+
+.title {
+  padding-bottom: 20px;
+  font-family: Oswald;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 70.5px;
+  text-align: left;
+  text-transform: uppercase;
+  /* Изменится потому что размеры неверные */
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__list {
+  position: relative;
+  height: 400px;
+  /* обязательно ли здесь указывать высоту */
+  overflow-y: auto;
+}
+
+.content__list-item {
+  /* Change */
+  margin-bottom: 30px;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.content__video-card-title {
+  font-family: Oswald;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16.2px;
+  text-align: left;
+}
+
+.content__video-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.content__video-card-thumbnail {
+  max-width: 194px;
+  height: 103px;
+  flex-grow: 1;
+  flex-basis: 194px;
+}
+
+.content__video-card-description-container {
+  flex-grow: 2;
+  flex-basis: 165px;
+}
