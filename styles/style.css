@@ -45,7 +45,9 @@ ol {
   max-height: auto;
   display: flex;
   align-items: flex-end;
+  justify-content: center;
   gap: 30px;
+
   margin: 133px auto;
   overflow: hidden;
   box-sizing: border-box;
@@ -182,4 +184,16 @@ ol {
 .content__video-card-description-container {
   flex-grow: 2;
   flex-basis: 165px;
+}
+
+/* --- custom hidden --- */
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
