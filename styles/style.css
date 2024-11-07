@@ -42,13 +42,14 @@ ol {
 .content {
   max-width: auto;
   /* нужно ли указывать ширина в точности как на макете? */
-  max-height: auto;
+  max-height: 100vh;
   display: flex;
-  align-items: flex-end;
   justify-content: center;
+  align-items: flex-end;
+
   gap: 30px;
 
-  margin: 133px auto;
+  margin-top: 133px;
   overflow: hidden;
   box-sizing: border-box;
   /* rewrite */
