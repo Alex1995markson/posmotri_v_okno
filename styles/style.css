@@ -40,20 +40,13 @@ ol {
 /* --- Own styles --- */
 
 .content {
-  max-width: auto;
-  /* нужно ли указывать ширина в точности как на макете? */
-  max-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-
   gap: 30px;
-
   margin-top: 133px;
   overflow: hidden;
   box-sizing: border-box;
-  /* rewrite */
-  /* overflow-x: scroll !important; */
 }
 
 /* --- main video --- */
@@ -197,4 +190,10 @@ ol {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
+}
+
+/* --- setting style default --- */
+
+fieldset {
+  border: 0;
 }
