@@ -47,7 +47,7 @@ ol {
   display: flex;
   align-items: flex-end;
   gap: 30px;
-  margin-top: 133px;
+  /* margin-top: 133px; */
   overflow: hidden;
   box-sizing: border-box;
 }
