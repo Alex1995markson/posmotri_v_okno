@@ -41,6 +41,14 @@ ol {
   list-style: none;
 }
 
+h2 {
+  font-size: inherit;
+  font-weight: normal;
+  line-height: inherit;
+  color: inherit;
+  text-transform: none;
+}
+
 /* --- Own styles --- */
 
 .content {
@@ -81,14 +89,19 @@ ol {
 
 /* --- form after video --- */
 
-.search-form__fieldset {}
-
-.search-form__fieldset-title {
+.search-form__fieldset {
   font-family: Fira Sans Condensed;
   font-size: 18px;
   font-weight: 400;
-  line-height: 25.6px;
-  text-align: left;
+  width: 225px;
+}
+
+/* --- title in checkboxes --- */
+
+.search-form__fieldset-title {
+  font-size: 18px;
+  line-height: 21.6px;
+  padding-bottom: 5px;
 }
 
 /* --- button "Найти" --- */
@@ -99,34 +112,30 @@ ol {
   margin-top: auto;
 }
 
+/* --- input Search --- */
+
 .search-form__label {
   width: fit-content;
 }
 
-/* --- block with checbox --- */
-
 .search-form__textfield {
-  /* --- При вёрстке текстового поля обращайте внимание на управление размерами,
-    границей,
-    цветом текста,
-    семейством шрифта,
-    размером шрифта,
-    фоном. Некоторые из этих свойств не наследуются. --- */
   background-color: transparent;
   border: none;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
-  color: #cccccc;
-  font-size: 16px;
-  /* padding: 8px 0; */
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: -1px;
+  font-size: 18px;
   outline: none;
-  width: 212px;
+  width: 225px;
 }
 
 .search-form__textfield:focus {
   outline: none;
   border-color: white;
 }
+
+/* --- block with checboxes --- */
 
 .search-form__pseudo-checkbox {
   display: inline-block;
