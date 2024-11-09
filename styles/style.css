@@ -54,7 +54,7 @@ h2 {
 .content {
   display: flex;
   column-gap: 30px;
-  overflow: hidden;
+  height: 534px;
   box-sizing: border-box;
 }
 
@@ -150,6 +150,7 @@ h2 {
   background-color: transparent;
   border: 1px solid white;
   position: relative;
+  /* --- make fix in test --- */
 }
 
 input[type='checkbox']:checked+span::after {
@@ -174,6 +175,7 @@ input[type='checkbox']:focus-visible+span {}
   height: 534px;
   max-width: 399px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .title {
@@ -191,11 +193,13 @@ input[type='checkbox']:focus-visible+span {}
   color: #545050;
 }
 
+
+/* --- working with cards of video ---  */
+
 .content__list {
   position: relative;
-  height: 400px;
-  /* обязательно ли здесь указывать высоту */
-  overflow-y: auto;
+  max-height: calc(377px - 20px - 60px);
+  overflow-y: scroll;
 }
 
 .content__list-item {
