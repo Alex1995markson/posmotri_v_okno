@@ -59,6 +59,7 @@ ol {
 
 .result__video-container {
   position: relative;
+  /* for download view in container */
 }
 
 .result__video {
@@ -70,7 +71,8 @@ ol {
 
 .search-form {
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .search-form__submit-button {
@@ -85,15 +87,81 @@ ol {
   font-family: Fira Sans Condensed;
   font-size: 18px;
   font-weight: 400;
-  line-height: 21.6px;
+  line-height: 25.6px;
   text-align: left;
+}
+
+/* --- button "Найти" --- */
+
+.search-form__submit-button {
+  width: 194px;
+  height: 34px;
+  margin-top: auto;
+}
+
+.search-form__label {
+  width: fit-content;
+}
+
+/* --- block with checbox --- */
+
+.search-form__textfield {
+  /* --- При вёрстке текстового поля обращайте внимание на управление размерами,
+    границей,
+    цветом текста,
+    семейством шрифта,
+    размером шрифта,
+    фоном. Некоторые из этих свойств не наследуются. --- */
+  background-color: transparent;
+  border: none;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  color: #cccccc;
+  font-size: 16px;
+  /* padding: 8px 0; */
+  outline: none;
+  width: 212px;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+  border-color: white;
+}
+
+.search-form__pseudo-checkbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+
+input[type='checkbox']:checked+span {
+  /* изменить значение для этого элемента работает неправильно)
+  + здесь должно быть нажатие на соседа то есть Утро */
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  vertical-align: middle;
+  background-color: #fff;
+}
+
+
+input[type='checkbox']:focus-visible+span {
+  /* изменить значение для этого элемента работает неправильно)
+      + здесь должно быть нажатие на соседа то есть Утро */
+
 }
 
 /* --- list of videos --- */
 
 .content__details {
   width: 100%;
-  max-height: 534px;
+  height: 534px;
   max-width: 399px;
   box-sizing: border-box;
 }
@@ -192,62 +260,6 @@ textarea {
   cursor: pointer;
 }
 
-.search-form__label {
-  width: fit-content;
-}
-
-.search-form__textfield {
-  /* --- При вёрстке текстового поля обращайте внимание на управление размерами,
-    границей,
-    цветом текста,
-    семейством шрифта,
-    размером шрифта,
-    фоном. Некоторые из этих свойств не наследуются. --- */
-  background-color: transparent;
-  border: none;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
-  color: #cccccc;
-  font-size: 16px;
-  /* padding: 8px 0; */
-  outline: none;
-  width: 212px;
-}
-
-.search-form__textfield:focus {
-  outline: none;
-  border-color: white;
-}
-
-.search-form__pseudo-checkbox {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
-  vertical-align: middle;
-  background-color: transparent;
-  border: 1px solid white;
-}
-
-
-input[type='checkbox']:checked+span {
-  /* изменить значение для этого элемента работает неправильно)
-  + здесь должно быть нажатие на соседа то есть Утро */
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  margin-right: 5px;
-  vertical-align: middle;
-  background-color: #fff;
-}
-
-
-input[type='checkbox']:focus-visible+span {
-  /* изменить значение для этого элемента работает неправильно)
-      + здесь должно быть нажатие на соседа то есть Утро */
-
-}
-
 .button {
   background-color: transparent;
   border: 1px solid white;
@@ -257,10 +269,4 @@ input[type='checkbox']:focus-visible+span {
   line-height: 21.6px;
   text-align: center;
   color: #fff;
-}
-
-.search-form__submit-button {
-  width: 194px;
-  height: 34px;
-  margin-top: auto;
 }
