@@ -171,7 +171,6 @@ input[type='checkbox']:checked+span::after {
   background-color: white;
 }
 
-
 input[type='checkbox']:focus-visible+span {}
 
 /* --- list of videos --- */
@@ -297,4 +296,20 @@ textarea {
   line-height: 21.6px;
   text-align: center;
   color: #fff;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 2px solid #ffffff;
+}
+
+.button:active {
+  background-color: #545050;
 }
