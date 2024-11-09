@@ -128,6 +128,7 @@ h2 {
   font-size: 18px;
   outline: none;
   width: 225px;
+  max-height: 27px;
 }
 
 .search-form__textfield:focus {
@@ -137,34 +138,34 @@ h2 {
 
 /* --- block with checboxes --- */
 
+.search-form__checkbox-list .search-form__label {
+  margin-right: 10px;
+}
+
 .search-form__pseudo-checkbox {
   display: inline-block;
   width: 20px;
   height: 20px;
-  margin-right: 5px;
   vertical-align: middle;
   background-color: transparent;
   border: 1px solid white;
+  position: relative;
 }
 
-
-input[type='checkbox']:checked+span {
-  /* изменить значение для этого элемента работает неправильно)
-  + здесь должно быть нажатие на соседа то есть Утро */
-  display: inline-block;
+input[type='checkbox']:checked+span::after {
+  content: "";
+  display: block;
   width: 15px;
   height: 15px;
-  margin-right: 5px;
-  vertical-align: middle;
-  background-color: #fff;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 
-input[type='checkbox']:focus-visible+span {
-  /* изменить значение для этого элемента работает неправильно)
-      + здесь должно быть нажатие на соседа то есть Утро */
-
-}
+input[type='checkbox']:focus-visible+span {}
 
 /* --- list of videos --- */
 
