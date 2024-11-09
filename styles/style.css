@@ -181,7 +181,6 @@ input[type='checkbox']:focus-visible+span {}
   line-height: 70.5px;
   text-align: left;
   text-transform: uppercase;
-  /* Изменится потому что размеры неверные */
 }
 
 .content__accent {
@@ -214,6 +213,8 @@ input[type='checkbox']:focus-visible+span {}
   line-height: 30px;
   text-align: left;
   text-transform: uppercase;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .content__video-card-description {
