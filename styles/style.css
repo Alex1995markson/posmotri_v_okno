@@ -129,11 +129,22 @@ h2 {
   outline: none;
   width: 225px;
   max-height: 27px;
+  transition: border-left 0.3s ease, border-right 0.3s ease;
 }
 
-.search-form__textfield:focus {
-  outline: none;
+.search-form__textfield:hover {
+  cursor: text;
+}
+
+.search-form__label:has(.search-form__textfield:focus-visible) {
+  /* --- not working --- */
   border-color: white;
+}
+
+.search-form__textfield:active {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  transition: border 2s ease;
 }
 
 /* --- block with checboxes --- */
@@ -241,6 +252,7 @@ input[type='checkbox']:focus-visible+span {}
 .content__video-card-description-container {
   flex-grow: 2;
   flex-basis: 165px;
+  overflow: hidden;
 }
 
 /* --- button  --- */
@@ -268,7 +280,6 @@ fieldset {
   border: 0;
 }
 
-input,
 button,
 select,
 input[type='checkbox']+span,
