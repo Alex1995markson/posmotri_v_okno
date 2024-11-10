@@ -54,7 +54,6 @@ h2 {
 .content {
   display: flex;
   column-gap: 30px;
-  height: 534px;
   box-sizing: border-box;
 }
 
@@ -90,7 +89,7 @@ h2 {
 /* --- form after video --- */
 
 .search-form__fieldset {
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-size: 18px;
   font-weight: 400;
   width: 225px;
@@ -119,17 +118,27 @@ h2 {
 }
 
 .search-form__textfield {
+  color: white;
   background-color: transparent;
   border: none;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
-  color: rgba(255, 255, 255, 0.7);
-  letter-spacing: -1px;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  font-family: Fira Sans Condensed, sans-serif;
+  font-weight: 400;
   font-size: 18px;
+  line-height: 21.6px;
   outline: none;
   width: 225px;
   max-height: 27px;
   transition: border-left 0.3s ease, border-right 0.3s ease;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__textfield::placeholder {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .search-form__textfield:hover {
@@ -137,8 +146,9 @@ h2 {
 }
 
 .search-form__label:has(.search-form__textfield:focus-visible) {
-  /* --- not working --- */
-  border-color: white;
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+  /* отнаследовать для других элементов */
 }
 
 .search-form__textfield:active {
@@ -177,7 +187,6 @@ input[type='checkbox']:focus-visible+span {}
 
 .content__details {
   width: 100%;
-  height: 534px;
   max-width: 399px;
   box-sizing: border-box;
   overflow: hidden;
@@ -185,7 +194,7 @@ input[type='checkbox']:focus-visible+span {}
 
 .title {
   padding-bottom: 20px;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 75px;
   font-weight: 700;
   line-height: 70.5px;
@@ -203,12 +212,17 @@ input[type='checkbox']:focus-visible+span {}
 .content__list {
   position: relative;
   max-height: calc(376px - 20px - 60px);
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* запрет на прокрутку по горизонтали */
 }
 
 .content__list-item {
-  /* Change */
   margin-bottom: 30px;
+}
+
+.content__list-item:last-child {
+  margin-bottom: 0;
 }
 
 .content__card-link {
@@ -217,7 +231,7 @@ input[type='checkbox']:focus-visible+span {}
 }
 
 .content__video-card-title {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 30px;
@@ -225,10 +239,13 @@ input[type='checkbox']:focus-visible+span {}
   text-transform: uppercase;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 16.2px;
@@ -243,6 +260,8 @@ input[type='checkbox']:focus-visible+span {}
 
 .content__video-card-thumbnail {
   max-width: 194px;
+  object-fit: cover;
+  object-position: center;
   height: 103px;
   flex-grow: 1;
   flex-basis: 194px;
@@ -288,14 +307,15 @@ textarea {
 }
 
 .button {
+  color: #fff;
   background-color: transparent;
-  border: 1px solid white;
-  font-family: Fira Sans Condensed;
+  border: 1px solid currentColor;
+  font-family: Fira Sans Condensed, sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 21.6px;
   text-align: center;
-  color: #fff;
+
 }
 
 .button:hover {
