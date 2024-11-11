@@ -181,13 +181,16 @@ input[type='checkbox']:checked+span::after {
   background-color: white;
 }
 
-input[type='checkbox']:focus-visible+span {}
+.search-form__label:focus-within {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
 
 /* --- list of videos --- */
 
 .content__details {
   width: 100%;
-  max-width: 399px;
+  max-width: 400px;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -256,6 +259,7 @@ input[type='checkbox']:focus-visible+span {}
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  transition: background-color 0.3s ease;
 }
 
 .content__video-card-thumbnail {
@@ -273,9 +277,31 @@ input[type='checkbox']:focus-visible+span {}
   overflow: hidden;
 }
 
+.content__video-card:hover {
+  text-decoration: underline;
+}
+
+.content__video-card:focus {
+  outline: none;
+  border: none;
+}
+
+.content__video-card:focus-within {
+  border: 1px solid #fff;
+}
+
+.content__video-card:active {
+  background-color: #545050;
+}
+
+/* .search-form__submit-button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+} */
+
 /* --- button  --- */
 .more-button {
-  width: 399px;
+  width: 400px;
   height: 34px;
   margin-top: auto;
 }
@@ -301,7 +327,7 @@ fieldset {
 button,
 select,
 input[type='checkbox']+span,
-/* соседа нужно указать */
+input[type='checkbox']+span+span,
 textarea {
   cursor: pointer;
 }
@@ -326,10 +352,11 @@ textarea {
   outline: none;
 }
 
-.button:focus-visible {
-  outline: 2px solid #ffffff;
-}
-
 .button:active {
   background-color: #545050;
+}
+
+.search-form__submit-button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
 }
