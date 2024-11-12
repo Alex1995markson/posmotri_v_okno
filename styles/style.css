@@ -60,7 +60,7 @@ h2 {
 /* --- main video --- */
 
 .result {
-  padding-top: 70px;
+  padding-top: 69px;
   max-width: 711px;
 }
 
@@ -73,10 +73,10 @@ h2 {
   width: 711px;
   height: 386px;
   object-fit: cover;
-  margin-bottom: 16px;
 }
 
 .search-form {
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -99,22 +99,24 @@ h2 {
 
 .search-form__fieldset-title {
   font-size: 18px;
-  line-height: 21.6px;
-  padding-bottom: 5px;
+  margin-bottom: 3px;
+  padding-left: 5px;
 }
 
 /* --- button "Найти" --- */
 
 .search-form__submit-button {
   width: 194px;
-  height: 34px;
   margin-top: auto;
 }
 
 /* --- input Search --- */
 
 .search-form__label {
+  display: inline-flex;
+  align-items: center;
   width: fit-content;
+  margin-right: 15px;
 }
 
 .search-form__textfield {
@@ -123,13 +125,13 @@ h2 {
   border: none;
   border-top: 1px solid currentColor;
   border-bottom: 1px solid currentColor;
+  padding: 2.5px 0;
   font-family: Fira Sans Condensed, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 21.6px;
   outline: none;
   width: 225px;
-  max-height: 27px;
   transition: border-left 0.3s ease, border-right 0.3s ease;
 }
 
@@ -148,7 +150,6 @@ h2 {
 .search-form__label:has(.search-form__textfield:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 2px;
-  /* отнаследовать для других элементов */
 }
 
 .search-form__textfield:active {
@@ -186,13 +187,15 @@ input[type='checkbox']:checked+span::after {
   outline-offset: 2px;
 }
 
+.search-form__label-text {
+  margin-left: 5px;
+}
+
 /* --- list of videos --- */
 
 .content__details {
   width: 100%;
-  max-width: 400px;
-  box-sizing: border-box;
-  overflow: hidden;
+  max-height: 100%;
 }
 
 .title {
@@ -214,10 +217,8 @@ input[type='checkbox']:checked+span::after {
 
 .content__list {
   position: relative;
-  max-height: calc(376px - 20px - 60px);
-  overflow-y: auto;
-  overflow-x: hidden;
-  /* запрет на прокрутку по горизонтали */
+  height: 298px;
+  overflow: auto;
 }
 
 .content__list-item {
@@ -294,10 +295,6 @@ input[type='checkbox']:checked+span::after {
   background-color: #545050;
 }
 
-/* .search-form__submit-button:focus-visible {
-  outline: 1px solid #fff;
-  outline-offset: 2px;
-} */
 
 /* --- button  --- */
 .more-button {
@@ -340,8 +337,8 @@ textarea {
   font-size: 18px;
   font-weight: 700;
   line-height: 21.6px;
+  min-height: 34px;
   text-align: center;
-
 }
 
 .button:hover {
@@ -359,4 +356,8 @@ textarea {
 .search-form__submit-button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 2px;
+}
+
+.content__card-link_current {
+  background-color: #545050;
 }
