@@ -79,7 +79,7 @@ h2 {
   margin-top: 13px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 .search-form__submit-button {
