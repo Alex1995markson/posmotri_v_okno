@@ -217,7 +217,7 @@ input[type='checkbox']:checked+span::after {
 
 .content__list {
   position: relative;
-  height: 298px;
+  height: 292px;
   overflow: auto;
 }
 
@@ -232,6 +232,7 @@ input[type='checkbox']:checked+span::after {
 .content__card-link {
   text-decoration: none;
   color: #fff;
+  outline: none;
 }
 
 .content__video-card-title {
@@ -263,7 +264,12 @@ input[type='checkbox']:checked+span::after {
   transition: background-color 0.3s ease;
 }
 
+.cards-list-item-template {
+  padding: 2px 0;
+}
+
 .content__video-card-thumbnail {
+  padding: 2px 0;
   max-width: 194px;
   object-fit: cover;
   object-position: center;
@@ -282,18 +288,17 @@ input[type='checkbox']:checked+span::after {
   text-decoration: underline;
 }
 
-/* TODo */
-.content__video-card:focus {
+.content__card-link:focus .content__video-card:not(:focus-visible) {
   outline: none;
-  border: none;
 }
 
-.content__video-card:focus-within {
+.content__card-link:focus-visible .content__video-card {
   border: 1px solid #fff;
+
 }
 
-.content__video-card:active {
-  background-color: #545050;
+.content__card-link:active .content__video-card {
+  background: #545050;
 }
 
 
