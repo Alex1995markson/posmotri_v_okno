@@ -76,7 +76,7 @@ h2 {
 }
 
 .search-form {
-  margin-top: 12px;
+  margin-top: 13px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -115,7 +115,7 @@ h2 {
 
 .search-form__label {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
   width: fit-content;
   margin-right: 15px;
 }
