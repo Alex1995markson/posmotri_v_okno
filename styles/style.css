@@ -93,7 +93,16 @@ h2 {
   font-size: 18px;
   font-weight: 400;
   width: 225px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   border: none;
+}
+
+.search-form__fieldset:nth-child(2) {
+  block-size: 54px;
+  inline-size: 225px;
+  gap: 7px;
 }
 
 /* --- title in checkboxes --- */
