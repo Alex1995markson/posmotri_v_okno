@@ -127,7 +127,7 @@ h2 {
   justify-content: flex-start;
   align-items: flex-start;
   width: fit-content;
-  margin-right: 15px;
+  margin-right: 12px;
 }
 
 .search-form__textfield {
@@ -172,7 +172,7 @@ h2 {
 /* --- block with checboxes --- */
 
 .search-form__checkbox-list .search-form__label {
-  margin-right: 10px;
+  margin-right: 7px;
 }
 
 .search-form__pseudo-checkbox {
