@@ -76,11 +76,7 @@ h2 {
 }
 
 .search-form {
-<<<<<<< HEAD
-  margin-top: 15px;
-=======
   margin-top: 16px;
->>>>>>> parent of b3f7fe9 (Update style.css)
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
