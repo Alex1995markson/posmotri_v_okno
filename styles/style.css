@@ -205,12 +205,12 @@ input[type='checkbox']:checked+span::after {
 /* --- list of videos --- */
 
 .content__details {
-  width: 100%;
+  width: 400px;
   max-height: 100%;
 }
 
 .title {
-  padding-bottom: 20px;
+  padding-bottom: 26px;
   font-family: Oswald, sans-serif;
   font-size: 75px;
   font-weight: 700;
@@ -228,7 +228,7 @@ input[type='checkbox']:checked+span::after {
 
 .content__list {
   position: relative;
-  height: 292px;
+  height: 298px;
   overflow: auto;
 }
 
