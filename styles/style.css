@@ -213,7 +213,7 @@ input[type='checkbox']:checked+span::after {
 /* --- list of videos --- */
 
 .content__details {
-  width: 400px;
+  width: 415px;
   max-height: 100%;
 }
 
